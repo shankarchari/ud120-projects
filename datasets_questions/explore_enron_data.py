@@ -19,4 +19,9 @@ import pickle
 
 enron_data = pickle.load(open("../final_project/final_project_dataset.pkl", "r"))
 
-
+#print {k:v["total_stock_value"] for k, v in enron_data.iteritems()}
+#print enron_data["PRENTICE JAMES"]["total_stock_value"]
+print sum([1 for k, v in enron_data.iteritems() if v['salary'] != 'NaN'])
+print sum([1 for k, v in enron_data.iteritems() if v['email_address'] != 'NaN'])
+print sum([1 for k, v in enron_data.iteritems() if (v['total_payments'] == 'NaN' and v['poi'] == True) ])
+print sum([1 for k, v in enron_data.iteritems() if v['poi'] == True ])
