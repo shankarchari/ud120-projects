@@ -9,7 +9,7 @@ import numpy
 import matplotlib
 matplotlib.use('agg')
 
-import matplotlib.pyplot as pyt 
+import matplotlib.pyplot as plt 
 from studentRegression import studentReg 
 from class_vis import prettyPicture, output_image
 
@@ -31,8 +31,8 @@ print "r-squared score:", reg.score(ages_train, net_worths_train)
 
 plt.clf()
 plt.scatter(ages_train, net_worths_train, color="b", labe="train data")
-plt.scatter(agest_test, net_worths_test, color="r", label="test data")
-plt.plot(ages_test, reg.predict(agest_test), color="black")
+plt.scatter(ages_test, net_worths_test, color="r", label="test data")
+plt.plot(ages_test, reg.predict(ages_test), color="black")
 plt.legend(loc=2)
 plt.xlabel("ages")
 plt.ylabel("net worths")
